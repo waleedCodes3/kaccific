@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        tools:context=".SignUpActivity">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:contentDescription="TODO"
+            android:src="@drawable/backarrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/signUpTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
+            android:text="SIGN UP"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+        <TextView
+            android:id="@+id/descriptionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="@string/upload_your_kid_Text"
+            android:textAlignment="textStart"
+            android:textColorHint="@color/greyishcolor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpTv" />
+
+        <EditText
+            android:id="@+id/kid_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/signup_textfields_bg"
+            android:hint="Enter KAD ID"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="18dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/greyishcolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageInputBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/signup_textfields_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kid_et">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/info_i"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/uploadimageicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/upload_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginBottom="14dp"
+                android:text="Click to upload image of your contract with Kacific."
+                android:textAlignment="center"
+                android:textColor="@color/greyishcolor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/uploadimageicon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/phonenumberlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/signup_textfields_bg"
+            android:orientation="horizontal"
+            android:paddingHorizontal="3dp"
+            android:paddingVertical="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageInputBox"
+            tools:ignore="ExtraText">
+
+            <!-- Spinner at the beginning -->
+            <Spinner
+                android:id="@+id/phonespinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:soundEffectsEnabled="true"
+                />
+
+            <!-- EditText for phone number -->
+            <EditText
+                android:id="@+id/phoneNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:backgroundTint="@color/white"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textColorHint="@color/greyishcolor" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            android:background="@drawable/signup_textfields_bg"
+            android:hint="Enter Email Address"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="18dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/greyishcolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phonenumberlayout" />
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            android:background="@drawable/signup_textfields_bg"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="18dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/greyishcolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_et" />
+
+        <CheckBox
+            android:id="@+id/checkboxterms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="By checking this box, you are agreeing to our terms of service."
+            android:textAlignment="textStart"
+            android:textColor="@color/darkBlue"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_et" />
+
+        <Button
+            android:id="@+id/createAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttonrounded"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="18dp"
+            android:text="CREATE AN ACCOUNT"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkboxterms" />
+
+        <TextView
+            android:id="@+id/bysignuptext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="By SigningUp you agree to our"
+            android:textAlignment="center"
+            android:textColor="@color/greyishcolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createAccount" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Terms and Conditions | Privacy Policy"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bysignuptext" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
